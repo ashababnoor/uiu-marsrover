@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruler CSS</title>
+    <link rel="stylesheet" href="ruler.css">
+</head>
+<body>
+    <div class="box">
+        <div class="num-value">Input: </div>
+        <div class="line">
+            <div class="color-bg">
+                <div class="ruler-value"></div>
+            </div>
+        </div>
+        <div class="ruler">
+            <ul class="ruler-x">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <!-- <ul class="ruler-y">
+                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul> -->
+        </div>
+    </div>
+
+    <div class="manual">
+        <input type="number" id="value">
+        <input type="submit" value="Read" id="input">
+    </div>
+
+    <script>
+        function setRulerValue(num) {
+            console.log('Input', num);
+            let ruler = document.querySelector('.ruler-value');
+            let text = document.querySelector('.num-value');
+
+            if(num === NaN){
+                ruler.style.width = '0%';
+                text.innerHTML = "Not a number";
+            }
+            else{
+                ruler.style.width = ((num/360)*100) + '%';
+                text.innerHTML = "Input: " + num;
+            }
+        }
+
+        document.querySelector('#input').addEventListener('click', function(){
+            let newValue = document.querySelector('#value').value;
+            //setRulerValue(num);
+            let ruler = document.querySelector('.ruler-value');
+            let text = document.querySelector('.num-value');
+            
+            let currValue = ruler.clientWidth;
+            // let delayAmount = 1000;
+
+            // console.log('Current Value', currValue);
+            // console.log('New Value', newValue);
+
+            // if (currValue <= newValue) {
+            //     for (var i=currValue; i<=newValue; i+=5) {
+            //         setTimeout(() => {
+            //             setRulerValue(i);
+            //         }, delayAmount);
+            //     }
+            // }
+            // else{
+            //     for (var i=currValue; i>=newValue; i-=5) {
+            //         setTimeout(() => {
+            //             setRulerValue(i);
+            //         }, delayAmount);
+            //     }
+            // }
+
+            // let difference = Math.abs(currValue - newValue);
+            // ruler.style.transitionDelay = ((2.5/360)*difference) +"s";
+            setRulerValue(newValue);
+        })
+    </script>
+</body>
+</html>

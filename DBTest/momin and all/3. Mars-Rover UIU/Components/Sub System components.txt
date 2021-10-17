@@ -1,0 +1,19 @@
+1. Node MCU   
+2. Jumper wire female to female, male to female, male to male 
+3. Buck     											
+4. Motor Driver 
+5. Motor 
+6. Wheels 																	
+7. Castor Ball  														
+8. Ultrasonic sensor 
+9. Veroboard ->															
+10. T connector for battery  
+11. Two block connector
+12. IC rail female and male  												
+13. Wires
+14. Switch
+15. Glue Gun  										
+16. Glue stick
+17. Solder iron, Run, Rozen 
+18. Multimeter
+19. Battery

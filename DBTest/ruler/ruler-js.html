@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #someSvgElementId{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <svg id="someSvgElementId" xmlns="http://www.w3.org/2000/svg"></svg>
+    <script type="text/javascript" src="rulez.js"></script>
+    <script>
+        var someSvgElement = document.getElementById('someSvgElementId');
+        var rulez = new Rulez({
+            element: someSvgElement,
+            
+            texts: [
+                {
+                    pixelGap: 50
+                }, {
+                    pixelGap: 100
+                }
+            ]
+            
+        });
+        rulez.render();
+    </script>
+</body>
+</html>

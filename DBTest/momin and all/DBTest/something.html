@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+    .arrows {
+      font-size:70px;
+      color:red;
+    }
+    .circularArrows {
+      font-size:80px;
+      color:blue;
+    }
+    td {
+      background-color:black;
+      border-radius:25%;
+      box-shadow: 5px 5px #888888;
+    }
+    td:active {
+      transform: translate(5px,5px);
+      box-shadow: none; 
+    }
+    .noselect {
+      -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome and Opera */
+    }
+    </style>
+  </head>
+  <body class="noselect" align="center" style="background-color:white">
+     
+    <h1 style="color: teal;text-align:center;">Hash Include Electronics</h1>
+    <h2 style="color: teal;text-align:center;">Wi-Fi &#128663; Control</h2>
+    
+    <table id="mainTable" style="width:400px;margin:auto;table-layout:fixed" CELLSPACING=10>
+      <tr>
+        <!-- <td onclick='onTouchStartAndEnd("5")' ><span class="arrows" >&#11017;</span></td> -->
+        <td style="background-color:white;box-shadow:none"></td>
+        <td onclick='onTouchStartAndEnd("f")' ><span class="arrows" >&#8679;</span></td>
+        <td style="background-color:white;box-shadow:none"></td>
+        <!-- <td onclick='onTouchStartAndEnd("6")' ><span class="arrows" >&#11016;</span></td> -->
+      </tr>
+      
+      <tr>
+        <td onclick='onTouchStartAndEnd("l")' ><span class="arrows" >&#8678;</span></td>
+        <td onclick='onTouchStartAndEnd("s")'><span class="arrows" >&#129197;</td>    
+        <td onclick='onTouchStartAndEnd("r")' ><span class="arrows" >&#8680;</span></td>
+      </tr>
+      
+      <tr>
+        <!-- <td onclick='onTouchStartAndEnd("7")'><span class="arrows" >&#11019;</span></td> -->
+        <td style="background-color:white;box-shadow:none"></td>
+        <td onclick='onTouchStartAndEnd("b")' ><span class="arrows" >&#8681;</span></td>
+        <td style="background-color:white;box-shadow:none"></td>
+        <!-- <td onclick='onTouchStartAndEnd("8")' ><span class="arrows" >&#11018;</span></td> -->
+      </tr>
+    
+      <!-- <tr>
+        <td onclick='onTouchStartAndEnd("9")' ><span class="circularArrows" >&#8634;</span></td>
+        <td style="background-color:white;box-shadow:none"></td>
+        <td onclick='onTouchStartAndEnd("10")' ><span class="circularArrows" >&#8635;</span></td>
+      </tr> -->
+    </table>
+    <script>
+      
+      function onTouchStartAndEnd(value) 
+      {
+        console.log(value);
+      }
+           
+    </script>
+    
+  </body>
+</html> 
